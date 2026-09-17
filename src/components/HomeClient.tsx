@@ -322,7 +322,7 @@ export const seoConfig = {
 
               {/* GitHub */}
               <a
-                href="https://github.com/asuselessbrain"
+                href="https://github.com/arfan-ahmed-shohag"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-2.5 bg-slate-800/80 border border-slate-700/80 rounded-lg hover:border-[#126972]/50 text-slate-400 hover:text-[#22a0ad] transition-colors"
@@ -334,7 +334,7 @@ export const seoConfig = {
 
               {/* LinkedIn */}
               <a
-                href="https://www.linkedin.com/in/arfan-ahmed40/"
+                href="https://www.linkedin.com/in/arfan-ahmed-shohag/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-2.5 bg-slate-800/80 border border-slate-700/80 rounded-lg hover:border-[#126972]/50 text-slate-400 hover:text-[#22a0ad] transition-colors"
@@ -628,8 +628,8 @@ export const seoConfig = {
                   key={idx}
                   onClick={() => setActiveServiceIndex(idx)}
                   className={`w-full text-left p-5 rounded-2xl border transition-all duration-300 relative overflow-hidden group cursor-pointer ${isActive
-                      ? "bg-[#1e293b] border-[#126972]/80 shadow-xl"
-                      : "bg-[#131b2e]/90 border-slate-800/90 hover:border-slate-700 hover:bg-[#19233c]"
+                    ? "bg-[#1e293b] border-[#126972]/80 shadow-xl"
+                    : "bg-[#131b2e]/90 border-slate-800/90 hover:border-slate-700 hover:bg-[#19233c]"
                     }`}
                 >
                   {/* Left Active Indicator Bar */}
@@ -642,16 +642,16 @@ export const seoConfig = {
                     <div className="flex items-center space-x-3.5">
                       <span
                         className={`text-xs font-mono font-bold px-2.5 py-1 rounded-md border transition-colors ${isActive
-                            ? "bg-[#023644]/60 text-[#22a0ad] border-[#126972]/50"
-                            : "bg-slate-900/60 text-slate-400 border-slate-800"
+                          ? "bg-[#023644]/60 text-[#22a0ad] border-[#126972]/50"
+                          : "bg-slate-900/60 text-slate-400 border-slate-800"
                           }`}
                       >
                         0{idx + 1}
                       </span>
                       <div
                         className={`p-2.5 rounded-xl border transition-colors ${isActive
-                            ? "bg-[#023644]/50 border-[#126972]/40 text-[#22a0ad]"
-                            : "bg-slate-900/60 border-slate-800 text-slate-400"
+                          ? "bg-[#023644]/50 border-[#126972]/40 text-[#22a0ad]"
+                          : "bg-slate-900/60 border-slate-800 text-slate-400"
                           }`}
                       >
                         {svc.icon}
@@ -660,8 +660,8 @@ export const seoConfig = {
 
                     <ArrowRight
                       className={`w-4 h-4 transition-transform duration-300 ${isActive
-                          ? "text-[#22a0ad] translate-x-1"
-                          : "text-slate-600 group-hover:text-slate-400"
+                        ? "text-[#22a0ad] translate-x-1"
+                        : "text-slate-600 group-hover:text-slate-400"
                         }`}
                     />
                   </div>
@@ -889,8 +889,8 @@ export const seoConfig = {
                 key={idx}
                 onClick={() => setActiveStep(idx)}
                 className={`p-4 border rounded-xl text-left transition-all flex items-center justify-between cursor-pointer ${activeStep === idx
-                    ? "border-[#126972]/80 bg-[#023644]/60 text-[#22a0ad] font-semibold"
-                    : "border-slate-800 bg-[#1e293b] text-slate-400 hover:text-slate-200"
+                  ? "border-[#126972]/80 bg-[#023644]/60 text-[#22a0ad] font-semibold"
+                  : "border-slate-800 bg-[#1e293b] text-slate-400 hover:text-slate-200"
                   }`}
               >
                 <div className="flex items-center space-x-3">

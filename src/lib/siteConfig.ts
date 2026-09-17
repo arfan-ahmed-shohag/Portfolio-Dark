@@ -17,8 +17,8 @@ export const abs = (path = "/"): string =>
 
 /** Genuine, verified social / contact profiles for Arfan Ahmed. */
 export const social = {
-  github: "https://github.com/asuselessbrain",
-  linkedin: "https://www.linkedin.com/in/arfan-ahmed40",
+  github: "https://github.com/arfan-ahmed-shohag",
+  linkedin: "https://www.linkedin.com/in/arfan-ahmed-shohag",
   facebook: "https://www.facebook.com/arfan.arfanahmed.73",
   whatsapp: "https://wa.me/8801615391684",
   email: "arfan18@cse.pstu.ac.bd",

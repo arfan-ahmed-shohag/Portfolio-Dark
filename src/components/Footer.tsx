@@ -25,7 +25,7 @@ export default function Footer() {
             {/* Social Pill Links */}
             <div className="flex items-center space-x-2.5 pt-2">
               <a
-                href="https://github.com/asuselessbrain"
+                href="https://github.com/arfan-ahmed-shohag"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-9 h-9 rounded-xl bg-[#1e293b] border border-slate-800 hover:border-[#126972] flex items-center justify-center text-slate-300 hover:text-[#22a0ad] transition-all hover:scale-105"
@@ -35,7 +35,7 @@ export default function Footer() {
                 <FaGithub className="w-4 h-4" />
               </a>
               <a
-                href="https://www.linkedin.com/in/arfan-ahmed40"
+                href="https://www.linkedin.com/in/arfan-ahmed-shohag"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-9 h-9 rounded-xl bg-[#1e293b] border border-slate-800 hover:border-[#126972] flex items-center justify-center text-slate-300 hover:text-[#22a0ad] transition-all hover:scale-105"

@@ -164,11 +164,10 @@ export default function ContactClient() {
                     disabled={status === "submitting"}
                     aria-invalid={errors.name ? true : undefined}
                     aria-describedby={errors.name ? "contact-name-error" : undefined}
-                    className={`w-full bg-slate-900 border px-4 py-2.5 rounded-lg text-xs text-slate-100 outline-none transition-all ${
-                      errors.name
-                        ? "border-red-500 focus:border-red-500"
-                        : "border-slate-800 focus:border-[#126972]"
-                    }`}
+                    className={`w-full bg-slate-900 border px-4 py-2.5 rounded-lg text-xs text-slate-100 outline-none transition-all ${errors.name
+                      ? "border-red-500 focus:border-red-500"
+                      : "border-slate-800 focus:border-[#126972]"
+                      }`}
                     placeholder="Enter your name"
                   />
                   {errors.name && (
@@ -193,11 +192,10 @@ export default function ContactClient() {
                     disabled={status === "submitting"}
                     aria-invalid={errors.email ? true : undefined}
                     aria-describedby={errors.email ? "contact-email-error" : undefined}
-                    className={`w-full bg-slate-900 border px-4 py-2.5 rounded-lg text-xs text-slate-100 outline-none transition-all ${
-                      errors.email
-                        ? "border-red-500 focus:border-red-500"
-                        : "border-slate-800 focus:border-[#126972]"
-                    }`}
+                    className={`w-full bg-slate-900 border px-4 py-2.5 rounded-lg text-xs text-slate-100 outline-none transition-all ${errors.email
+                      ? "border-red-500 focus:border-red-500"
+                      : "border-slate-800 focus:border-[#126972]"
+                      }`}
                     placeholder="name@company.com"
                   />
                   {errors.email && (
@@ -221,11 +219,10 @@ export default function ContactClient() {
                     rows={5}
                     aria-invalid={errors.message ? true : undefined}
                     aria-describedby={errors.message ? "contact-message-error" : undefined}
-                    className={`w-full bg-slate-900 border px-4 py-2.5 rounded-lg text-xs text-slate-100 outline-none resize-none transition-all ${
-                      errors.message
-                        ? "border-red-500 focus:border-red-500"
-                        : "border-slate-800 focus:border-[#126972]"
-                    }`}
+                    className={`w-full bg-slate-900 border px-4 py-2.5 rounded-lg text-xs text-slate-100 outline-none resize-none transition-all ${errors.message
+                      ? "border-red-500 focus:border-red-500"
+                      : "border-slate-800 focus:border-[#126972]"
+                      }`}
                     placeholder="Describe your project, timeframe, and goals..."
                   />
                   {errors.message && (
@@ -295,7 +292,7 @@ export default function ContactClient() {
 
               {/* LinkedIn */}
               <a
-                href="https://www.linkedin.com/in/arfan-ahmed40"
+                href="https://www.linkedin.com/in/arfan-ahmed-shohag"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-3.5 p-3.5 bg-slate-900/60 border border-slate-800 rounded-xl hover:border-[#126972]/50 transition-all group"
@@ -313,7 +310,7 @@ export default function ContactClient() {
 
               {/* GitHub */}
               <a
-                href="https://github.com/asuselessbrain"
+                href="https://github.com/arfan-ahmed-shohag"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-3.5 p-3.5 bg-slate-900/60 border border-slate-800 rounded-xl hover:border-[#126972]/50 transition-all group"
