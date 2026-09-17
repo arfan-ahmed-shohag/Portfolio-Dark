@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Menu, X, Download, Code2 } from "lucide-react";
+import { Menu, X, Send, Code2 } from "lucide-react";
 import * as analytics from "@/utils/analytics";
 
 export default function Navbar() {
@@ -72,16 +72,16 @@ export default function Navbar() {
             );
           })}
 
-          {/* Download Resume Button */}
+          {/* Connect With Me Button */}
           <div className="flex items-center border-l border-slate-800 pl-6">
             <a
-              href="/resume.pdf"
-              download="Arfan_Ahmed_Resume.pdf"
-              onClick={() => analytics.trackResumeDownload()}
+              href="https://wa.me/8801615391684"
+              target="_blank"
+              rel="noopener noreferrer"
               className="px-4 py-2 border border-[#126972]/60 text-cyan-400 hover:bg-[#023644]/40 hover:border-[#126972] text-xs font-semibold rounded-lg transition-all flex items-center gap-1.5 shadow-sm"
             >
-              <Download className="w-3.5 h-3.5" />
-              <span>Resume</span>
+              <Send className="w-3.5 h-3.5" />
+              <span>Connect With Me</span>
             </a>
           </div>
         </div>
@@ -121,16 +121,14 @@ export default function Navbar() {
 
           <div className="mt-auto pt-6 border-t border-slate-800">
             <a
-              href="/resume.pdf"
-              download="Arfan_Ahmed_Resume.pdf"
-              onClick={() => {
-                handleNavClick();
-                analytics.trackResumeDownload();
-              }}
+              href="https://wa.me/8801615391684"
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={handleNavClick}
               className="w-full py-3 px-4 rounded-lg bg-gradient-to-r from-[#126972] to-[#22a0ad] hover:from-[#18838f] hover:to-[#2bc0d0] text-white font-bold text-xs text-center uppercase tracking-wide flex items-center justify-center gap-2 shadow-md"
             >
-              <Download className="w-4 h-4" />
-              <span>Download Resume</span>
+              <Send className="w-4 h-4" />
+              <span>Connect With Me</span>
             </a>
           </div>
         </div>

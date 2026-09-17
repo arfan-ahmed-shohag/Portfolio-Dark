@@ -3,7 +3,6 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import ProjectCard, { Project } from "@/components/ProjectCard";
-import ProjectModal from "@/components/ProjectModal";
 import { FolderGit2 } from "lucide-react";
 import {
   CategoryOption,
@@ -28,7 +27,6 @@ export default function ProjectsClient({
   initialProjects,
 }: ProjectsClientProps) {
   const [filter, setFilter] = useState<string>("all");
-  const [selectedProject, setSelectedProject] = useState<Project | null>(null);
 
   const [categories, setCategories] = useState<CategoryOption[]>(
     initialCategories && initialCategories.length > 0
@@ -169,10 +167,7 @@ export default function ProjectsClient({
                   exit={{ opacity: 0, scale: 0.95 }}
                   transition={{ duration: 0.25 }}
                 >
-                  <ProjectCard
-                    project={project}
-                    onSelect={(p) => setSelectedProject(p)}
-                  />
+                  <ProjectCard project={project} />
                 </motion.div>
               ))}
             </AnimatePresence>
@@ -189,16 +184,6 @@ export default function ProjectsClient({
           </p>
         </section>
       )}
-
-      {/* Project Details Modal */}
-      <AnimatePresence>
-        {selectedProject && (
-          <ProjectModal
-            project={selectedProject}
-            onClose={() => setSelectedProject(null)}
-          />
-        )}
-      </AnimatePresence>
     </article>
   );
 }

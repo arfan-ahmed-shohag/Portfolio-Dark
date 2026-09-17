@@ -1,15 +1,19 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { ExternalLink, ArrowRight } from "lucide-react";
 import * as analytics from "@/utils/analytics";
 import { FaGithub } from "react-icons/fa";
 
 export interface Project {
   id: string;
+  slug?: string;
+  isFeatured?: boolean;
   title: string;
   category: string;
   image?: string;
+  gallery?: string[];
   tags: string[];
   desc: string;
   demoUrl: string;
@@ -27,21 +31,27 @@ export interface Project {
 
 interface ProjectCardProps {
   project: Project;
-  onSelect: (project: Project) => void;
+  onSelect?: (project: Project) => void;
 }
 
 export default function ProjectCard({ project, onSelect }: ProjectCardProps) {
+  const projectSlug = project.slug || project.id;
+  const projectLink = `/projects/${projectSlug}`;
+
   const handleCardClick = () => {
     analytics.trackProjectClick(project.id, project.title);
-    onSelect(project);
+    if (onSelect) {
+      onSelect(project);
+    }
   };
 
   const imageSrc = project.image || `/images/projects/${project.id}.webp`;
 
   return (
-    <div
+    <Link
+      href={projectLink}
       onClick={handleCardClick}
-      className="bg-[#1e293b] border border-slate-800 hover:border-[#126972]/60 rounded-2xl overflow-hidden flex flex-col justify-between group transition-all duration-300 shadow-md hover:shadow-lg cursor-pointer h-full"
+      className="bg-[#1e293b] border border-slate-800 hover:border-[#126972]/60 rounded-2xl overflow-hidden flex flex-col justify-between group transition-all duration-300 shadow-md hover:shadow-lg cursor-pointer h-full block"
     >
       <div>
         {/* TOP SCREENSHOT THUMBNAIL (Original aspect-video ratio with smooth linear scroll on hover) */}
@@ -123,7 +133,7 @@ export default function ProjectCard({ project, onSelect }: ProjectCardProps) {
           )}
         </div>
       </div>
-    </div>
+    </Link>
   );
 }
 

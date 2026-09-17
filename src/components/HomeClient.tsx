@@ -6,7 +6,6 @@ import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import TypingText from "@/components/TypingText";
 import ProjectCard, { Project } from "@/components/ProjectCard";
-import ProjectModal from "@/components/ProjectModal";
 import {
   ArrowRight,
   Download,
@@ -21,7 +20,9 @@ import {
   Lock,
   GraduationCap,
   CheckCircle2,
-  Terminal
+  Terminal,
+  Sparkles,
+  Send
 } from "lucide-react";
 import { FaGithub, FaLinkedinIn, FaFacebookF, FaWhatsapp, FaWordpress, FaNodeJs, FaReact } from "react-icons/fa";
 import {
@@ -37,10 +38,13 @@ import {
 } from "react-icons/si";
 import { FiMail } from "react-icons/fi";
 
-export default function HomeClient() {
+interface HomeClientProps {
+  initialProjects?: Project[];
+}
+
+export default function HomeClient({ initialProjects }: HomeClientProps = {}) {
   const [activeStep, setActiveStep] = useState(0);
   const [activeServiceIndex, setActiveServiceIndex] = useState(0);
-  const [selectedProject, setSelectedProject] = useState<Project | null>(null);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -177,80 +181,10 @@ export const seoConfig = {
     { name: "Supabase", level: "Advanced", icon: <SiSupabase className="w-5 h-5 text-[#22a0ad]" /> }
   ];
 
-  const featuredProjects: Project[] = [
-    {
-      id: "proj_07",
-      image: "/images/projects/proj_07.webp",
-      title: "CALM ABA Therapy — Healthcare Website Redesign",
-      category: "wordpress",
-      tags: ["WordPress", "Elementor Pro", "SEO", "Responsive Design", "Intake Flow"],
-      desc: "A full homepage redesign and layout modernization for a Maryland-based ABA therapy center, built to feel modern, trustworthy, and healthcare-grade.",
-      demoUrl: "https://calmllc.org/",
-      gitUrl: "",
-      problem: "The client's existing WordPress site had an outdated layout, lacked clear conversion paths for parents seeking therapy, and had no structured local SEO presence.",
-      solution: "Redesigned core pages using Elementor Pro, added clear CTA sections, an insurance-aware service breakdown across 6 pages, and Google Forms intake integration.",
-      result: "Delivered a fully responsive healthcare website with a clear service catalog, working lead-capture flow, and locally optimized SEO structure.",
-      archDetails: {
-        frontend: "Elementor Pro page builder on Hello Elementor theme with custom responsive sections.",
-        backend: "WordPress core with Elementor Pro stack and Google Forms intake handling.",
-        database: "Standard WordPress MySQL schema extended with Elementor template data.",
-        detailsList: [
-          "Full homepage redesign following a modern healthcare reference style.",
-          "Six dedicated service pages with insurance guidance.",
-          "Google Forms-based intake flow for lead capture.",
-          "Local SEO optimization for Maryland-based ABA therapy searches."
-        ]
-      }
-    },
-    {
-      id: "proj_08",
-      image: "/images/projects/proj_08.webp",
-      title: "OMLI Trading — Global Minerals Trading Website",
-      category: "wordpress",
-      tags: ["WordPress", "Elementor Pro", "B2B", "SEO", "Corporate"],
-      desc: "Corporate B2B website built for a U.S.-based international minerals trading company, featuring trust statistics, product pages, and a global supply network map.",
-      demoUrl: "https://omlitrading.com/",
-      gitUrl: "",
-      problem: "The client needed a website that communicated global scale to industrial buyers, but lacked clear company positioning, statistics, or product details.",
-      solution: "Designed an 8-page corporate site on WordPress with Elementor Pro, adding key trust statistics (600k+ MT exported), product pages, and a global trade map.",
-      result: "Delivered a professional corporate website positioning the client as a credible global supplier with working quote request flows.",
-      archDetails: {
-        frontend: "Elementor Pro on WordPress with custom sections for hero stats and trade routes map.",
-        backend: "WordPress multi-page architecture structured for B2B search visibility.",
-        database: "Standard WordPress MySQL schema managing page content and quote requests.",
-        detailsList: [
-          "Homepage rebuilt around a clear one-sentence value proposition.",
-          "Key company stats (600,000+ MT exported, 15+ years experience).",
-          "Product pages for Rock Salt, Rock Phosphate, and Sulfur.",
-          "Global supply network map showing Egypt-to-Americas trade routes."
-        ]
-      }
-    },
-    {
-      id: "proj_09",
-      image: "/images/projects/proj_09.webp",
-      title: "Amilli Financial — Insurance Agency Website",
-      category: "wordpress",
-      tags: ["WordPress", "Elementor", "GoHighLevel", "CRM Integration", "Lead Generation"],
-      desc: "An 8-page independent insurance agency website built from a client reference site, with lead forms integrated directly into GoHighLevel CRM.",
-      demoUrl: "https://amillifinancial.com/",
-      gitUrl: "",
-      problem: "The client needed a modern, fully owned website with reliable lead capture routed to their GoHighLevel CRM and an agent recruitment funnel.",
-      solution: "Built an 8-page WordPress site with Elementor, integrated GoHighLevel CRM webhooks for form submissions, and added carrier showcases and reviews.",
-      result: "Delivered a professional insurance agency site with working CRM lead routing and an agent recruitment section.",
-      archDetails: {
-        frontend: "Elementor page builder with custom lead capture forms and carrier logo carousels.",
-        backend: "WordPress core with GoHighLevel CRM webhook integration.",
-        database: "WordPress MySQL schema with external CRM payload forwarding.",
-        detailsList: [
-          "Built 8 pages covering Life Insurance, Annuities, IUL, and Final Expense.",
-          "Integrated GoHighLevel CRM webhooks for form submissions.",
-          "Created an agent recruiting landing section.",
-          "Featured interactive carrier maps and client reviews."
-        ]
-      }
-    }
-  ];
+
+  const allProjects = initialProjects && initialProjects.length > 0 ? initialProjects : [];
+  const featuredOnly = allProjects.filter((p) => p.isFeatured);
+  const featuredProjects = (featuredOnly.length > 0 ? featuredOnly : allProjects).slice(0, 6);
 
   const workflowSteps = [
     {
@@ -777,13 +711,22 @@ export const seoConfig = {
         transition={{ duration: 0.4 }}
         className="space-y-6 z-10 relative overflow-hidden"
       >
-        <div className="text-left space-y-2">
-          <h2 className="text-xs font-bold text-[#22a0ad] tracking-wider uppercase">
-            Technical Stack
-          </h2>
-          <p className="text-2xl md:text-3xl font-extrabold tracking-tight text-slate-100">
-            Skills &amp; Technologies
-          </p>
+        <div className="flex items-center justify-between gap-4">
+          <div className="text-left space-y-2">
+            <h2 className="text-xs font-bold text-[#22a0ad] tracking-wider uppercase">
+              Technical Stack
+            </h2>
+            <p className="text-2xl md:text-3xl font-extrabold tracking-tight text-slate-100">
+              Skills &amp; Technologies
+            </p>
+          </div>
+
+          <Link
+            href="/about"
+            className="text-xs font-bold text-[#22a0ad] hover:text-cyan-300 flex items-center gap-1 uppercase tracking-wider"
+          >
+            <span>View All Expertise</span> <ArrowRight className="w-3.5 h-3.5" />
+          </Link>
         </div>
 
         {/* Dual Marquee Container with Gradient Edge Overlays */}
@@ -859,9 +802,18 @@ export const seoConfig = {
             <ProjectCard
               key={project.id}
               project={project}
-              onSelect={(p) => setSelectedProject(p)}
             />
           ))}
+        </div>
+
+        <div className="text-center pt-2">
+          <Link
+            href="/projects"
+            className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-[#126972] to-[#22a0ad] hover:from-[#18838f] hover:to-[#2bc0d0] text-white font-bold text-xs uppercase tracking-wider rounded-xl transition-all shadow-[0_0_20px_rgba(18,105,114,0.4)] group"
+          >
+            <span>Explore All Projects</span>
+            <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+          </Link>
         </div>
       </motion.section>
 
@@ -1152,16 +1104,6 @@ export const seoConfig = {
           </div>
         </div>
       </motion.section>
-
-      {/* Project Details Modal */}
-      <AnimatePresence>
-        {selectedProject && (
-          <ProjectModal
-            project={selectedProject}
-            onClose={() => setSelectedProject(null)}
-          />
-        )}
-      </AnimatePresence>
     </article>
   );
 }

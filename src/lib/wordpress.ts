@@ -171,11 +171,43 @@ export async function fetchWordPressProjects(): Promise<Project[]> {
           .filter(Boolean);
       }
 
+      // Gallery images from embedded attachments or ACF
+      let gallery: string[] = [];
+
+      if (Array.isArray(embedded["acf:attachment"])) {
+        gallery = embedded["acf:attachment"]
+          .map((att: any) => att.source_url || att.media_details?.sizes?.large?.source_url || att.media_details?.sizes?.full?.source_url)
+          .filter(Boolean);
+      }
+
+      if (gallery.length === 0 && Array.isArray(acf.project_gallery)) {
+        gallery = acf.project_gallery
+          .map((img: any) => (typeof img === "string" ? img : img.url || img.source_url))
+          .filter(Boolean);
+      }
+
+      if (gallery.length === 0 && Array.isArray(acf.gallery)) {
+        gallery = acf.gallery
+          .map((img: any) => (typeof img === "string" ? img : img.url || img.source_url))
+          .filter(Boolean);
+      }
+
+      if (imageUrl && !gallery.includes(imageUrl)) {
+        gallery.unshift(imageUrl);
+      }
+
+      if (gallery.length === 0 && imageUrl) {
+        gallery = [imageUrl];
+      }
+
       return {
         id: String(post.id),
+        slug: post.slug || String(post.id),
+        isFeatured: Boolean(acf.is_featured),
         title: cleanHtmlText(post.title?.rendered || "Untitled Project"),
         category: categorySlug,
         image: imageUrl,
+        gallery,
         tags,
         desc: cleanHtmlText(acf.short_description || post.excerpt?.rendered || ""),
         demoUrl: acf.demo_url || "",
@@ -196,3 +228,18 @@ export async function fetchWordPressProjects(): Promise<Project[]> {
     return [];
   }
 }
+
+export async function fetchWordPressProjectBySlug(slugOrId: string): Promise<Project | null> {
+  try {
+    const projects = await fetchWordPressProjects();
+    const target = slugOrId.toLowerCase();
+    const match = projects.find(
+      (p) => (p.slug && p.slug.toLowerCase() === target) || p.id === slugOrId
+    );
+    return match || null;
+  } catch (error) {
+    console.error(`Error fetching WordPress project for slug ${slugOrId}:`, error);
+    return null;
+  }
+}
+
