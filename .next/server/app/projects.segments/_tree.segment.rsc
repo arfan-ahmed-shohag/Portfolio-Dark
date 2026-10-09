@@ -1,0 +1,4 @@
+:HL["/_next/static/chunks/0l6t0fxviht4z.css","style"]
+:HL["/_next/static/media/406d3fc8d5ec9f59-s.p.06~5xv2ritwv5.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/_next/static/media/83afe278b6a6bb3c-s.p.0q-301v4kxxnr.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"projects","param":null,"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}},"staleTime":300,"buildId":"1OQruXO21rbC4ytzTRp1c"}

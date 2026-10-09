@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0f1d" />
+      <stop offset="100%" stop-color="#111827" />
+    </linearGradient>
+    <linearGradient id="brandGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="50%" stop-color="#818cf8" />
+      <stop offset="100%" stop-color="#c084fc" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background Box with Rounded Corners -->
+  <rect width="512" height="512" rx="128" fill="url(#bg)" />
+  <rect width="512" height="512" rx="128" fill="none" stroke="url(#brandGrad)" stroke-width="16" stroke-opacity="0.4" />
+
+  <!-- Bold, Clean Monogram Letter "A" -->
+  <path
+    d="M 256 116 L 140 396 M 256 116 L 372 396 M 176 300 L 336 300"
+    fill="none"
+    stroke="url(#brandGrad)"
+    stroke-width="52"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+</svg>

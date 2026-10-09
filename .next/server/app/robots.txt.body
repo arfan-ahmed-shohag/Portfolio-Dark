@@ -1,0 +1,6 @@
+User-Agent: *
+Allow: /
+Disallow: /api/
+
+Host: https://arfanahmed.tech
+Sitemap: https://arfanahmed.tech/sitemap.xml
