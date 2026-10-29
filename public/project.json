@@ -648,5 +648,290 @@
                 "Responsive layouts for dispatch information, equipment cards, pricing, and enquiry forms across device sizes."
             ]
         }
+    },
+    {
+        "id": "proj_19",
+        "image": "/images/projects/proj_19.webp",
+        "title": "Seraphin Solutions Group — Construction & Real Estate Advisory Website Redesign",
+        "category": "wordpress",
+        "tags": [
+            "WordPress",
+            "Elementor",
+            "Elementor Pro",
+            "Hello Elementor",
+            "Native Elementor Widgets",
+            "Corporate Website",
+            "Service Pages",
+            "Lead Generation",
+            "Responsive Design"
+        ],
+        "desc": "A complete WordPress redesign for a real estate, construction, and facilities advisory firm, translating an approved design mockup into editable Elementor layouts with dedicated service pages, an Insights section, portfolio experience highlights, and business enquiry forms.",
+        "demoUrl": "https://usmanbashir.pronizam.com/",
+        "gitUrl": "",
+        "problem": "The client's existing website did not meet the visual quality expected of a professional construction and real estate advisory firm, and key navigation items led to sections of the homepage rather than separate pages. The replacement needed to closely follow an approved design mockup while using the client's supplied company copy and relevant stock photography. A key requirement was to build the design with native Elementor widgets so the client could maintain the site, rather than rely on an automated mockup export made up of large HTML blocks.",
+        "solution": "Rebuilt the website in WordPress on the Hello Elementor theme, using Elementor and Elementor Pro to turn the approved visual direction into editable page layouts. Structured the homepage around the firm's audiences, capabilities, value proposition, experience, and engagement models, with service navigation leading to dedicated pages. Created detailed pages for Due Diligence & Property Assessments, Owner's Representation, Construction Program Optimization, Consulting & Advisory, Facilities Strategy & Optimization, and Procurement & Strategic Sourcing, alongside About, Insights, and Contact. Used native headings, text, images, icon boxes, counters, tabs, and form widgets for the core presentation. Added enquiry forms on the homepage and Contact page to collect the visitor's name, company, role, email, phone, area of interest, and project message. Refined the content hierarchy, imagery, section spacing, and responsive layouts around the supplied content and client feedback.",
+        "result": "Delivered a complete WordPress website preview with a consistent corporate identity, distinct service pages, clear navigation, and enquiry paths for owners, operators, and investors. The core layouts remain editable through Elementor, giving the client a practical way to maintain company content and service information while presenting the firm's construction, real estate, facilities, and capital-program expertise.",
+        "archDetails": {
+            "frontend": "Elementor and Elementor Pro layouts on Hello Elementor, using native heading, text, image, icon-box, counter, tab, navigation, and form widgets for the core interface. Responsive page sections organise service information, portfolio experience, engagement models, and enquiry calls to action.",
+            "backend": "WordPress content management for company information, dedicated service pages, and the Insights section, with Elementor Pro forms collecting business enquiries on the homepage and Contact page.",
+            "database": "WordPress database managing page content, Elementor layout settings, reusable site templates, navigation, and media references, with standard WordPress publishing available for future Insights articles.",
+            "detailsList": [
+                "Full WordPress redesign based on the client's approved mockup, company content, and requested visual direction.",
+                "Core layouts built with native Elementor widgets to support ongoing editing in the page builder.",
+                "Dedicated About, service, Insights, and Contact pages replacing the previous reliance on homepage section links for key navigation.",
+                "Six service pages covering due diligence, owner's representation, construction program optimisation, consulting, facilities strategy, and procurement.",
+                "Homepage sections presenting the firm's audiences, capabilities, value proposition, experience, and engagement models.",
+                "Service dropdown navigation and clear links from capability sections to the relevant service pages.",
+                "Portfolio experience counters and structured engagement sections using Elementor counter, icon-box, and tab widgets.",
+                "Business enquiry forms collecting names, organisation, role, contact details, area of interest, and a project message.",
+                "Insights section introducing the firm's real estate, construction, facilities, and procurement perspectives.",
+                "Relevant project and industry imagery with responsive typography, spacing, and layouts for desktop, tablet, and mobile."
+            ]
+        }
+    },
+    {
+        "id": "proj_20",
+        "image": "/images/projects/proj_20.webp",
+        "title": "MARTEL — Experience Packages & Venue Discovery Platform",
+        "category": "wordpress",
+        "tags": [
+            "WordPress",
+            "Elementor Pro",
+            "JetEngine",
+            "JetSmartFilters",
+            "Custom Post Types",
+            "Dynamic Listings",
+            "Venue Directory",
+            "Package Search",
+            "Responsive Design"
+        ],
+        "desc": "A dynamic WordPress experience discovery platform for curated London, Paris, and holiday packages, connecting searchable package listings with detailed venue information, budget and category filters, and concierge enquiries for tailored experiences.",
+        "demoUrl": "https://alldone.fun/",
+        "gitUrl": "",
+        "problem": "The client had a growing collection of experience packages and supplier information spread across PDFs and documents, covering restaurants, activities, spas, hotels, and limousine services. The website needed to turn that material into a clear catalogue where visitors could discover packages by budget, destination, or interest and inspect the venues included in each experience. Package prices needed to remain distinct from individual venue prices, while addresses, descriptions, imagery, and related venue details had to stay manageable as the catalogue changed. The scope also evolved through venue substitutions, revised package combinations, and a brand change from The Social Club to MARTEL.",
+        "solution": "Built the platform in WordPress with Elementor Pro, JetEngine, and JetSmartFilters on Hello Elementor. Created separate package and venue content types with relationships linking each package to its constituent venues. Developed dynamic listing cards, package detail templates, and a dedicated venue archive, showing package titles, reference labels, estimated prices, related venues, descriptions, and addresses. Added keyword search and filters for price bands, destination, package category, and venue type, alongside venue sorting and load-more pagination. Organised the supplied content into curated experience combinations and refined venue details, images, and nearby restaurant pairings through repeated client feedback. Applied the MARTEL branding and added a shared custom-package enquiry banner, email and telephone contact links, and the client's weekday call hours, allowing visitors to request changes to an existing package or discuss a new one with the concierge.",
+        "result": "Delivered a searchable experience catalogue with separate package and venue journeys, connected venue information, and clear concierge enquiry options. The WordPress content structure gives the client a way to maintain suppliers and package combinations without rebuilding the page layouts, while visitors can compare experiences by budget and interest before requesting a tailored arrangement.",
+        "archDetails": {
+            "frontend": "Elementor Pro templates on Hello Elementor with JetEngine listing grids and dynamic fields, linked package and venue detail pages, featured collections, and mobile filter panels. JetSmartFilters provides search and archive controls, with venue sorting and load-more navigation.",
+            "backend": "WordPress with JetEngine custom post types, package-to-venue relationships, and dynamic listing configuration, supported by JetSmartFilters. Concierge requests use the site's email and telephone contact paths, with a shared banner explaining how to customise packages.",
+            "database": "WordPress content and metadata for packages, venues, estimated prices, reference labels, addresses, descriptions, and media, with JetEngine relationships connecting packages to venues and taxonomies supporting the discovery filters.",
+            "detailsList": [
+                "Separate package and venue content types linked through JetEngine relationships.",
+                "Dynamic package cards displaying titles, reference labels, estimated prices, and the names of included venues.",
+                "Package detail pages connecting visitors to venue descriptions, addresses, pricing information, and individual venue pages.",
+                "Keyword search and filters for budget, destination, package category, and venue type through JetSmartFilters.",
+                "Dedicated venue archive with category filtering, alphabetical and date sorting, and load-more pagination.",
+                "Curated restaurant, activity, spa, hotel, and transport content drawn from the client's supplied package and supplier documents.",
+                "Featured package collections and updated imagery, descriptions, and venue combinations based on client feedback.",
+                "Shared enquiry banner inviting visitors to customise an existing package or request a new experience.",
+                "MARTEL branding, concierge email and telephone links, and a visible weekday call-hours notice.",
+                "Editable Elementor templates and responsive package, venue, and filter layouts across device sizes."
+            ]
+        }
+    },
+    {
+        "id": "proj_21",
+        "image": "/images/projects/proj_21.webp",
+        "title": "Rollz For Days — Toilet Roll Subscription Store with Local Delivery",
+        "category": "wordpress",
+        "tags": [
+            "WordPress",
+            "Elementor Pro",
+            "WooCommerce",
+            "Recurring Subscriptions",
+            "Stripe",
+            "E-commerce",
+            "Local Delivery",
+            "Local Pickup",
+            "Responsive Design"
+        ],
+        "desc": "A WordPress and WooCommerce subscription storefront for monthly toilet roll deliveries, offering two plans for 20 or 25 rolls, Stripe payment gateway integration, a defined local delivery area, and a local pickup option supported by clear pricing and subscription guidance.",
+        "demoUrl": "https://rollzfordays.com/",
+        "gitUrl": "",
+        "problem": "The client needed a simple online business selling toilet paper through monthly subscriptions rather than one-off product enquiries. Customers had to understand how many rolls each plan included, the recurring price, and how delivery worked before subscribing. Delivery coverage was limited to selected North London postcode areas, later expanded at the client's request, so the storefront also needed to explain the service area and offer a practical collection alternative. The design needed to follow an approved reference while keeping the plan selection and purchase journey clear on mobile.",
+        "solution": "Built the storefront in WordPress with Elementor Pro and WooCommerce on Hello Elementor. Set up two monthly subscription products for 20 and 25 rolls, with the current shop displaying GBP 5.50 and GBP 6.50 per month respectively, and integrated the WooCommerce Stripe payment gateway. Created a homepage explaining the subscription process, plan quantities, monthly delivery, and the route into the product catalogue and checkout. Defined the local delivery scope around the client's selected postcode areas and presented a local pickup alternative at Wood Green station with its address and a map link. Added a contact section, social links, and the client's community-support message, and refined the Rollz branding and product quantity labels through client feedback.",
+        "result": "Delivered a live subscription storefront with two clearly labelled monthly plans, a WooCommerce shopping journey, and visible guidance for local delivery and collection. The site presents the recurring offer in a compact format that customers can browse on mobile, while the WordPress and WooCommerce setup lets the business maintain product information, pricing, and store operations.",
+        "archDetails": {
+            "frontend": "Elementor Pro layouts on Hello Elementor with subscription plan cards, a three-step explanation of the service, a WooCommerce menu cart, local pickup information, contact fields, and social links. Product and shop pages show the roll quantity and monthly price for each plan.",
+            "backend": "WordPress and WooCommerce with monthly subscription product types and the Stripe payment gateway, supported by local delivery configuration and a collection option. Standard WooCommerce shop, product, cart, and checkout routes provide the purchase flow.",
+            "database": "WordPress and WooCommerce data for products, prices, customer and order information, and subscription records, alongside Elementor page layouts and media. Store administration remains within the WordPress and WooCommerce dashboard.",
+            "detailsList": [
+                "WordPress and WooCommerce storefront built around a recurring monthly toilet roll subscription offer.",
+                "Two subscription products for 20 and 25 rolls, with explicit quantities and monthly GBP pricing.",
+                "WooCommerce Stripe payment gateway integration for the subscription purchase flow.",
+                "Local delivery scope based on the client's requested North London postcode areas: N4, N8, N15, N22, N6, N19, and N7.",
+                "Local pickup information for Wood Green station, including the collection postcode and a map link.",
+                "Homepage guidance explaining plan selection, monthly dispatch, and the subscription process.",
+                "Connected shop and product pages, cart access, and clear subscription calls to action.",
+                "Contact section, social links, and messaging about supporting local children's clubs and youth activities.",
+                "Rollz branding and corrected roll-count labels following client feedback.",
+                "Responsive storefront layouts for browsing plans and continuing to checkout on desktop, tablet, and mobile."
+            ]
+        }
+    },
+    {
+        "id": "proj_22",
+        "image": "/images/projects/proj_22.webp",
+        "title": "Designa — Live Website Clone & Dynamic Agency Portfolio",
+        "category": "wordpress",
+        "tags": [
+            "WordPress",
+            "Elementor Pro",
+            "Website Cloning",
+            "JetEngine",
+            "JetSmartFilters",
+            "Custom Post Types",
+            "Dynamic Portfolio",
+            "Custom Elementor Widgets",
+            "GSAP",
+            "Three.js",
+            "Lead Generation",
+            "Responsive Design"
+        ],
+        "desc": "A Lithuanian digital agency website recreated from an existing live reference and adapted into a dynamic WordPress platform, with reusable project listings, category-based portfolio browsing, animated visual sections, and project enquiry forms with service selection and file attachments.",
+        "demoUrl": "https://designa.lt/",
+        "gitUrl": "",
+        "problem": "The client needed an existing live website cloned and then customised into a dynamic platform for their own digital agency. The work required retaining the reference's visual presentation while adapting the content, navigation, portfolio, and enquiry flows to the client's requirements. Project content needed to be managed as reusable records that could appear in different homepage collections and portfolio categories, while prospective clients needed clear ways to describe a project, select a service, and attach supporting material.",
+        "solution": "Recreated the live reference in WordPress with Elementor Pro and Hello Elementor, adapting the design to Designa's Lithuanian content and agency branding. Used custom ElementsKit widgets alongside Elementor sections, with GSAP animation and Three.js visual elements supporting the presentation. Organised the site into Home, About, Services, Projects, and Contact pages. Built a JetEngine Projects content type with separate taxonomy structures for homepage collections and the portfolio archive, then connected reusable listing grids and dynamic fields to those records. Added category filters and pagination through JetSmartFilters, allowing the portfolio to group projects, insights, SEO content, and solution stories. Created project enquiry forms in page sections and a shared popup, collecting contact details, company, service interest, a project description, and optional file attachments with required privacy consent. Added a shorter callback form and reused navigation, contact, and footer sections across the site.",
+        "result": "Delivered a live agency website that carries the reference design into a client-specific WordPress implementation with structured portfolio content and multiple enquiry paths. Project records can be maintained centrally and displayed through reusable layouts, while visitors can explore services, browse portfolio categories, and submit a project brief. The result supports ongoing content updates through the CMS while retaining the animated presentation and visual character of the cloned reference.",
+        "archDetails": {
+            "frontend": "Elementor Pro layouts on Hello Elementor with custom ElementsKit widgets, GSAP animations, and Three.js visual elements. JetEngine grids and dynamic fields display portfolio records, with tabbed experience sections, category controls, pagination, and a shared enquiry popup.",
+            "backend": "WordPress with a JetEngine Projects custom post type, homepage and portfolio taxonomies, and reusable listing configuration. JetSmartFilters handles portfolio category selection and pagination, while Elementor Pro supplies the project enquiry, callback, and contact forms.",
+            "database": "WordPress content and metadata for project records, featured media, project categories, homepage grouping, page content, and Elementor templates. JetEngine fields and taxonomy assignments provide the data used by the dynamic portfolio listings.",
+            "detailsList": [
+                "Existing live website cloned and customised to the client's agency branding, Lithuanian content, and dynamic content requirements.",
+                "Separate Home, About, Services, Projects, and Contact pages with shared navigation and footer sections.",
+                "JetEngine Projects custom post type for managing portfolio records through WordPress.",
+                "Separate homepage and portfolio taxonomy structures for grouping projects into reusable content collections.",
+                "Dynamic project cards and listing grids reused across homepage showcases, service pages, and the portfolio archive.",
+                "JetSmartFilters category controls and pagination for browsing projects, insights, SEO content, and solution stories.",
+                "Custom ElementsKit widgets, GSAP animation, and Three.js visual elements supporting the reference-based presentation.",
+                "Tabbed experience sections and service presentations adapted to the agency's own content.",
+                "Shared project enquiry popup and inline forms collecting contact details, company, service interest, and a project description.",
+                "Optional project file attachments and required privacy-consent checkboxes in the main enquiry forms.",
+                "Short callback form and dedicated Contact page with telephone, email, office details, and working hours.",
+                "Reusable Elementor templates and responsive layouts supporting ongoing portfolio and content updates."
+            ]
+        }
+    },
+    {
+        "id": "proj_23",
+        "image": "/images/projects/proj_23.webp",
+        "title": "Livingston Pro Wash — Multifamily Cleaning Website & Property Quote Forms",
+        "category": "wordpress",
+        "tags": [
+            "WordPress",
+            "Elementor Pro",
+            "ElementsKit",
+            "Service Area Pages",
+            "Property Quote Forms",
+            "Before & After Sliders",
+            "Downloadable Resources",
+            "Lead Generation",
+            "Responsive Design"
+        ],
+        "desc": "A WordPress rebrand for a multifamily exterior cleaning business, combining dedicated service and state coverage pages, property-specific quote enquiries, before-and-after comparisons, and downloadable preparation resources for property managers.",
+        "demoUrl": "https://steaffon.pronizam.com/",
+        "gitUrl": "",
+        "problem": "The client was rebranding an existing exterior cleaning business as Livingston Pro Wash and needed an informational website focused specifically on apartment communities. The supplied mockups had to become a coherent site with separate navigation for cleaning services and geographic coverage, while property managers, ownership groups, and portfolio clients needed content relevant to their responsibilities. The enquiry process also needed to collect meaningful property information rather than just a name and message, and the extensive desktop layouts needed to be adapted to the client's mobile designs.",
+        "solution": "Built the website in WordPress with Elementor Pro and Hello Elementor, applying the Livingston Pro Wash branding and the client's supplied layouts. Created dedicated pages for building washing, breezeways and stairwells, sidewalks and curbs, pool decks, parking garages, and dumpster pads, alongside coverage pages for Georgia, Alabama, Tennessee, North Carolina, and South Carolina. Added content for property managers, ownership groups, portfolio programmes, and annual cleaning plans. Developed a quote form collecting the community and management company, contact role, property address, state and ZIP code, building count, approximate area, preferred timing, and selected services. Integrated before-and-after image comparisons, testimonial sections, FAQs, and downloadable resident notices, preparation checklists, signage, and resident guidance. Refined the mobile hero sections, off-canvas navigation, image treatment, and footer structure through the client's review rounds.",
+        "result": "Delivered a branded multifamily cleaning website preview with detailed service coverage, property-specific quote intake, and practical resources for preparing a community for cleaning. Property managers can review the relevant service and location information before making an enquiry, while the business can maintain the service, resource, and company content through WordPress.",
+        "archDetails": {
+            "frontend": "Elementor Pro layouts on Hello Elementor with service cards, separate service and coverage menus, responsive hero sections, testimonial carousels, and ElementsKit before-and-after image comparisons. Mobile layouts use an off-canvas menu and adjusted content arrangements.",
+            "backend": "WordPress content management for cleaning services, state coverage, property audiences, and downloadable resources. Elementor Pro provides the property quote and contact forms, with reusable navigation and footer templates across the site.",
+            "database": "WordPress page content, Elementor layouts and templates, navigation settings, media references, and links to the uploaded preparation documents. Quote forms collect the property and service information required for follow-up.",
+            "detailsList": [
+                "Website rebrand from the client's existing business to Livingston Pro Wash, focused on multifamily exterior cleaning.",
+                "Six dedicated cleaning service pages covering buildings, breezeways, sidewalks, pool decks, parking garages, and dumpster pads.",
+                "Separate geographic coverage pages for Georgia, Alabama, Tennessee, North Carolina, and South Carolina.",
+                "Content tailored to property managers, ownership groups, portfolio clients, and annual cleaning programmes.",
+                "Detailed quote intake collecting property and management information, location, building count, approximate area, timing, and service selections.",
+                "Before-and-after image comparison sliders using the client's cleaning imagery, supported by testimonial and FAQ sections.",
+                "Downloadable resident notices, property manager checklist, sample signage, and resident FAQ resources.",
+                "Clear quote and property-walk enquiry calls to action throughout the service and audience pages.",
+                "Desktop and mobile layouts adapted from client mockups, including off-canvas navigation and revised hero treatments.",
+                "Shared footer, company details, social links, privacy, terms, and sitemap navigation."
+            ]
+        }
+    },
+    {
+        "id": "proj_24",
+        "image": "/images/projects/proj_24.webp",
+        "title": "Livingston Pro Seal — Surface Care Website & Photo Estimate Enquiries",
+        "category": "wordpress",
+        "tags": [
+            "WordPress",
+            "Elementor Pro",
+            "ElementsKit",
+            "Service Business Website",
+            "Estimate Forms",
+            "Photo Uploads",
+            "Before & After Slider",
+            "Lead Generation",
+            "Responsive Design"
+        ],
+        "desc": "A dedicated WordPress website for residential and commercial surface cleaning and sealing, presenting material-specific services, property audience pages, an illustrative before-and-after comparison, and detailed estimate enquiries with optional project photos.",
+        "demoUrl": "https://site2.steaffon.pronizam.com/wp/",
+        "gitUrl": "",
+        "problem": "The client needed a separate website for Livingston Pro Seal, with its own branding, navigation, and cleaning-and-sealing content under the wider Livingston Property Pros business. Visitors needed to understand the differences between caring for concrete, pavers, brick, and pool decks, as well as the preparation and assessment required before sealing. The site also needed to serve homeowners, communities, commercial properties, and builders while collecting enough surface and project information to begin an estimate review.",
+        "solution": "Built the site in WordPress with Elementor Pro on Hello Elementor, following the client's desktop and mobile mockups and keeping Pro Seal's content distinct from the Pro Wash site. Organised services around concrete driveways, paver patios, pool decks, and brick walkways, with audience pages for homeowners, apartments and HOAs, commercial properties, builders and developers, and community driveways. Added process and preparation guidance, finish considerations, realistic surface-care expectations, FAQs, and an illustrative before-and-after image comparison. Created estimate layouts collecting property type, surfaces, location, approximate area, service needs, previous sealing, timing, contact preferences, and optional photographs, with contact consent. Connected service and audience calls to action to the estimate route and explained the review and assessment steps before work is booked.",
+        "result": "Delivered a dedicated Pro Seal website preview with clear surface-care information and a detailed estimate enquiry flow. Visitors can identify the relevant service and property type, understand what information helps an assessment, and send project details and photographs for review. The WordPress setup keeps the business content and page layouts manageable as the service offering develops.",
+        "archDetails": {
+            "frontend": "Elementor Pro layouts on Hello Elementor with surface-specific service sections, property audience navigation, process steps, FAQ accordions, and an ElementsKit before-and-after comparison. Desktop and mobile estimate layouts follow the client's supplied design direction.",
+            "backend": "WordPress content management for services, property audiences, process, company, and contact pages. Elementor Pro forms handle general enquiries and estimate intake, including surface selections, project details, optional photo uploads, and contact consent.",
+            "database": "WordPress page content, Elementor layouts, reusable templates, navigation, and media references. Estimate forms collect the surface, property, and contact information used to review a project and discuss the next steps.",
+            "detailsList": [
+                "Separate Livingston Pro Seal website with brand-specific content and navigation under Livingston Property Pros.",
+                "Service information for concrete driveways, paver patios, pool decks, and brick walkways.",
+                "Audience pages for homeowners, apartments and HOAs, commercial properties, builders and developers, and community driveways.",
+                "Process, preparation, finish, and curing guidance with FAQs explaining surface-specific considerations.",
+                "Illustrative before-and-after image comparison demonstrating the cleaning and sealing presentation.",
+                "Detailed estimate form covering property type, surface selections, location, approximate area, treatment needs, and timing.",
+                "Optional project photo uploads, contact preferences, and required contact-consent controls in the estimate forms.",
+                "Clear explanation of estimate review and assessment before the scope, timing, and service booking are agreed.",
+                "Connected service and audience calls to action leading to the dedicated estimate page.",
+                "Editable Elementor layouts with separate desktop and mobile treatments based on the client's mockups."
+            ]
+        }
+    },
+    {
+        "id": "proj_25",
+        "image": "/images/projects/proj_25.webp",
+        "title": "Livingston Junk Pros — Commercial Cleanout Website & Pickup Estimates",
+        "category": "wordpress",
+        "tags": [
+            "WordPress",
+            "Elementor Pro",
+            "Junk Removal Website",
+            "Service Pages",
+            "Estimate Forms",
+            "Photo Uploads",
+            "Recurring Service Enquiries",
+            "Lead Generation",
+            "Responsive Design"
+        ],
+        "desc": "A WordPress junk removal and cleanout website for multifamily, commercial, and construction properties, with dedicated service pages, an item pickup guide, and detailed estimate enquiries covering photos, access, timing, and one-time or recurring needs.",
+        "demoUrl": "https://steaffon3.pronizam.com/",
+        "gitUrl": "",
+        "problem": "The client needed Livingston Junk Pros presented as a distinct service brand with a clear sitemap and desktop and mobile layouts. Property managers, businesses, and contractors needed to find the right cleanout service, understand which items could be considered for pickup, and provide enough information for an estimate. Enquiries needed to capture the property, item details, access requirements, timing, and pickup frequency rather than treat every removal request as the same type of job.",
+        "solution": "Built the website in WordPress with Elementor Pro and Hello Elementor, using the client's supplied branding, sitemap, and page references. Created individual pages for apartment cleanouts, bulk item pickup, office and retail cleanouts, construction debris, property cleanups, and recurring pickup programmes, supported by About, Contact, Service Areas, FAQ, and legal pages. Added an item guide grouping common pickup items, items requiring confirmation, and materials excluded from standard collection. Developed estimate forms collecting service and property type, project address, item and access details, preferred timing, one-time or recurring needs, contact information, and optional photographs, with privacy and terms acknowledgement. Included photo and access guidance, review steps, and clear messaging that an estimate request starts a discussion before a booking is confirmed. Adapted hero sections, service cards, navigation, and footer layouts to the client's mobile references.",
+        "result": "Delivered a dedicated junk removal website preview with clear service categories, item guidance, and a structured estimate enquiry route. Visitors can describe the scope and practical requirements of a pickup before the team follows up, while the business can manage its service, company, FAQ, and guidance content through WordPress.",
+        "archDetails": {
+            "frontend": "Elementor Pro layouts on Hello Elementor with service cards, dedicated service pages, FAQ accordions, item-guide sections, and responsive desktop and mobile navigation. Estimate layouts include photo guidance and explanations of the review process.",
+            "backend": "WordPress content management for cleanout services, service areas, item guidance, and company information. Elementor Pro forms collect estimate and contact enquiries with service and property selections, scheduling preferences, photo uploads, and consent fields.",
+            "database": "WordPress page content, Elementor templates, navigation, and media references for the service and guidance pages. Estimate forms collect project, property, item, and contact information for follow-up by the removal team.",
+            "detailsList": [
+                "Dedicated Livingston Junk Pros website built from the client's branding, sitemap, and desktop and mobile page references.",
+                "Six service pages covering apartment cleanouts, bulk pickup, office and retail cleanouts, construction debris, property cleanups, and recurring programmes.",
+                "Item pickup guide distinguishing common items, items requiring confirmation, and materials excluded from standard collection.",
+                "Estimate intake collecting service type, property type, project address, item details, and contact information.",
+                "Preferred timing and one-time or recurring pickup selections for different property requirements.",
+                "Optional photo uploads with guidance on showing items, access routes, stairs, and parking or loading areas.",
+                "Privacy and terms acknowledgement controls in the estimate enquiry layouts.",
+                "Clear estimate review steps and messaging explaining that a request does not itself confirm a service booking.",
+                "Supporting About, Contact, Service Areas, FAQ, privacy, terms, and sitemap pages.",
+                "Brand-specific imagery and responsive hero, service-card, off-canvas menu, and footer layouts."
+            ]
+        }
     }
 ]
