@@ -24,18 +24,20 @@ jobs:
             nvm use 24
 
             # ২. ফোল্ডার চেক করা (না থাকলে Clone করবে, থাকলে Pull করবে)
-            if [ ! -d "$HOME/Portfolio" ]; then
-              echo "Project directory does not exist. Cloning repository..."
-              git clone -b deployment https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git $HOME/Portfolio
-              cd $HOME/Portfolio
+            if [ ! -d "$HOME/Met_Club/Test" ]; then
+              echo "Project directory does not exist. Creating branch..."
+              mkdir -p $HOME/Met_Club/Test
+              cd $HOME/Met_Club/Test
+              git clone -b deployment https://github.com/arfan-ahmed-shohag/Portfolio-Dark.git arfan
+              cd arfan
               npm install
               npm run build
-              pm2 start npm --name "portfolio:3000" -- run start
+              pm2 start npm --name "portfolio:3001" -- run start -- -p 3001 
             else
               echo "Project directory exists. Pulling latest code..."
-              cd $HOME/Portfolio
+              cd $HOME/Met_Club/Test/arfan
               git pull origin deployment
               npm install
               npm run build
-              pm2 restart portfolio:3000
+              pm2 restart portfolio:3001
             fi

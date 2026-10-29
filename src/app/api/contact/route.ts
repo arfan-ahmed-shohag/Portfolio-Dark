@@ -40,11 +40,14 @@ export async function POST(request: Request) {
         user,
         pass,
       },
+      tls: {
+        rejectUnauthorized: false,
+      },
     });
 
     // 1. Send Notification Email to the Owner (You)
     const ownerMailOptions = {
-      from: `"${name} via Secure Uplink" <${user}>`,
+      from: `"${name} via Portfolio Uplink" <${user}>`,
       to: receiver,
       replyTo: email,
       subject: `[UPLINK_ALERT] New Message from ${name}`,
@@ -97,11 +100,23 @@ export async function POST(request: Request) {
       `,
     };
 
-    // Send both emails in parallel
-    await Promise.all([
+    // Dispatch emails with Promise.allSettled so auto-reply failures won't block main delivery
+    const results = await Promise.allSettled([
       transporter.sendMail(ownerMailOptions),
       transporter.sendMail(senderMailOptions),
     ]);
+
+    const ownerResult = results[0];
+    const senderResult = results[1];
+
+    if (ownerResult.status === "rejected") {
+      console.error("[SMTP Owner Mail Error]:", ownerResult.reason);
+      throw ownerResult.reason;
+    }
+
+    if (senderResult.status === "rejected") {
+      console.warn("[SMTP Sender Auto-Reply Failed]:", senderResult.reason);
+    }
 
     return NextResponse.json({ success: true, message: "Transmission complete" });
   } catch (error: unknown) {

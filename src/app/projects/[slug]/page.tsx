@@ -3,17 +3,14 @@ import { notFound } from "next/navigation";
 import ProjectDetailClient from "@/components/ProjectDetailClient";
 import JsonLd from "@/components/JsonLd";
 import { pageGraph } from "@/lib/siteConfig";
-import {
-  fetchWordPressProjects,
-  fetchWordPressProjectBySlug,
-} from "@/lib/wordpress";
+import { getProjects, getProjectBySlug } from "@/lib/projects";
 
 interface PageProps {
   params: Promise<{ slug: string }>;
 }
 
-export async function generateStaticParams() {
-  const projects = await fetchWordPressProjects();
+export function generateStaticParams() {
+  const projects = getProjects();
   return projects.map((project) => ({
     slug: project.slug || project.id,
   }));
@@ -21,7 +18,7 @@ export async function generateStaticParams() {
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { slug } = await params;
-  const project = await fetchWordPressProjectBySlug(slug);
+  const project = getProjectBySlug(slug);
 
   if (!project) {
     return {
@@ -62,13 +59,13 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
 export default async function ProjectDetailPage({ params }: PageProps) {
   const { slug } = await params;
-  const project = await fetchWordPressProjectBySlug(slug);
+  const project = getProjectBySlug(slug);
 
   if (!project) {
     notFound();
   }
 
-  const allProjects = await fetchWordPressProjects();
+  const allProjects = getProjects();
   const relatedProjects = allProjects
     .filter((p) => p.id !== project.id)
     .slice(0, 3);

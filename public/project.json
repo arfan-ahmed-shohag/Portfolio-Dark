@@ -439,7 +439,7 @@
         "demoUrl": "https://freshstartboca.org/",
         "gitUrl": "",
         "problem": "The client had a static HTML prototype hosted on Vercel with no CMS, meaning no way to edit content, swap images, or manage sections without a developer. The site also lacked a working donation flow, a way for partners to reach out, and any real page structure — everything lived on one page with placeholder content and no clear information architecture.",
-        "solution": "Rebuilt the static HTML site as a fully editable WordPress site on Hostinger, replacing the display fonts with more readable classic typography, and restructuring content into dedicated pages: Home, About, Our Work (Activities), Global Impact, Team, Updates (blog), and Contact. Connected the donation call-to-actions site-wide to the client's live GoFundMe campaign, and built a Contact page with a working inquiry form routed to the client's email along with a direct partners & collaborations mailto link. Replaced placeholder imagery with the client-supplied images from their shared drive, kept the original waterdrop logo mark, and added an Instagram link in the footer. Through a follow-up revision round, added an extra "coming soon" activity card to both the Home and Our Work activity grids, an additional highlight box on the Updates page, and swapped image positions under "Our Work" per client feedback.",
+        "solution": "Rebuilt the static HTML site as a fully editable WordPress site on Hostinger, replacing the display fonts with more readable classic typography, and restructuring content into dedicated pages: Home, About, Our Work (Activities), Global Impact, Team, Updates (blog), and Contact. Connected the donation call-to-actions site-wide to the client's live GoFundMe campaign, and built a Contact page with a working inquiry form routed to the client's email along with a direct partners & collaborations mailto link. Replaced placeholder imagery with the client-supplied images from their shared drive, kept the original waterdrop logo mark, and added an Instagram link in the footer. Through a follow-up revision round, added an extra \"coming soon\" activity card to both the Home and Our Work activity grids, an additional highlight box on the Updates page, and swapped image positions under \"Our Work\" per client feedback.",
         "result": "Delivered a live, fully client-editable WordPress site at freshstartboca.org with working donation and contact flows, structured multi-page navigation, impact stats (lives impacted, funds raised, campaigns run), and a activities/campaign feed — replacing a static single-page prototype with a maintainable site the student team can update on their own.",
         "archDetails": {
             "frontend": "Elementor-built page layouts (hero with impact stats, problem/statistics section, campaign cards, activity grid with a standing 'more coming soon' card) with classic readable typography replacing the original display fonts, and a consistent off-canvas mobile navigation.",
@@ -493,7 +493,7 @@
     {
         "id": "proj_15",
         "image": "/images/projects/proj_15.webp",
-        "title": "Clear Progress ABA — WordPress Website Build",
+        "title": "Clear Progress ABA WordPress Website Build",
         "category": "wordpress",
         "tags": [
             "WordPress",
@@ -545,7 +545,7 @@
             "SEO"
         ],
         "desc": "A full multi page WordPress website built from scratch for an Irish GAA (Gaelic football) club, integrating live fixtures/results, online membership, club lotto, merchandise, and sponsorship management into one platform for club officials and the local community.",
-        "demoUrl": "https://jackmurphy.pronizam.com/",
+        "demoUrl": "https://stpatricksgfclordship.ie/",
         "gitUrl": "",
         "problem": "The client, a GAA club committee, needed a website built from a reference design with no existing site, covering fixtures & results, news, club shop, sponsorship, membership, and history. Key challenges included pulling live fixtures/results automatically from the county GAA and LGFA (ladies) websites instead of manual entry, integrating Clubforce for online lotto, Foireann for membership sign-up, Stripe for recurring corporate sponsorship payments, and building an editable structure the club's own admins could manage without developer help going forward.",
         "solution": "Built a multi page GAA club site (Home, Fixtures & Results, News, Club Shop, Teams, History, Photo Gallery, Sponsorship, Contact) on WordPress with Elementor, matched to club branding and colors. Implemented a live fixtures and results feed using the official Foireann Open Data API, filtered by age group and gender (Senior/Junior/Minor/Juvenile for men's and ladies football) with correct GAA style scoring format, replacing manual updates. Integrated Clubforce for the weekly club lotto (jackpot and numbers display), Foireann for membership sign-up and player registration, and Stripe payment links for monthly/annual corporate sponsorship subscriptions with a dedicated landing page. Built a sponsorship showcase with auto-scrolling logos linked to sponsor websites, an injury claim section (GAA/LGFA side-by-side with QR codes), a photo gallery page, and a news section the club can update. Iterated through 11+ rounds of revisions covering layout, hover/color states, mobile-specific responsive fixes (fixtures on one line, header sizing), font matching to a reference GAA site, contact page redesign, and ongoing sponsor list updates.",
@@ -565,6 +565,87 @@
                 "Photo gallery page structured like the news section, linking to event photo slideshows.",
                 "Mobile specific fixes: single line fixture/result cards, header sizing, font matching to a reference club site.",
                 "Social media integration (Facebook, Instagram, X) and club contact details."
+            ]
+        }
+    },
+    {
+        "id": "proj_17",
+        "image": "/images/projects/proj_17.webp",
+        "title": "PPFS — Financial Advisory Website Redesign & Client Portal Integration",
+        "category": "wordpress",
+        "tags": [
+            "WordPress",
+            "Elementor",
+            "Elementor Pro",
+            "Interactive UI",
+            "BIS Client Portal",
+            "Calendly Integration",
+            "SMTP2GO",
+            "Cloudways Migration",
+            "Responsive Design",
+            "PDF Integration"
+        ],
+        "desc": "A complete WordPress website redesign and hosting migration for an Irish financial advisory firm, featuring interactive seven-tier Personal and Business planning pages, an embedded client portal, adviser booking links, and consultation forms connected to authenticated email delivery.",
+        "demoUrl": "https://ppfs.ie/",
+        "gitUrl": "",
+        "problem": "The client needed a fully working replacement for an existing financial services website, using an approved reference design and updated company copy under a tight launch deadline. The main challenge was presenting detailed Personal and Business financial planning content through a clear seven-tier interface that worked on both desktop and mobile. The site also needed client portal access, adviser booking, consultation enquiries, community videos, and updated legal documents. Launch and follow-up work introduced further requirements around hosting migration, SSL, preserving legal URLs used in QR codes, mandatory privacy consent, and resolving form emails that were not reaching the sales mailbox.",
+        "solution": "Rebuilt the site on WordPress with Elementor and Elementor Pro, following the supplied reference while updating the copy and layouts across Home, Personal, Business, Our Approach, Meet Our Team, Community Support, Client Services, Contact, consultation forms, and legal pages. Created interactive seven-tier planning sections with selectable tiers, previous/next navigation, mobile-centred selectors, contextual information panels, financial warnings, and links to the Family and Corporate Advisory Brief PDFs. Embedded the externally hosted BIS client portal, connected adviser booking buttons to Calendly, and added community videos and links from homepage cards to the corresponding community sections. Required privacy consent before enquiry form submission, retained submissions in the WordPress dashboard, and configured WP Mail SMTP with SMTP2GO to route form notifications to the sales mailbox. Migrated the site to Cloudways, coordinated DNS and SSL setup, retained existing legal URLs used in printed QR codes, and refined mobile PDF display, headshot cropping, card alignment, typography, and a reusable footer banner through repeated client reviews.",
+        "result": "Delivered a live financial advisory website with clear Personal and Business planning journeys, client portal access, adviser booking links, downloadable advisory documents, and form submissions reaching the sales mailbox. The completed work brought the approved company content into a manageable WordPress structure and addressed repeated desktop, tablet, and mobile feedback, including tier navigation, consent validation, legal document display, layout consistency, and post-migration email delivery.",
+        "archDetails": {
+            "frontend": "Elementor layouts on the Hello Elementor theme, with interactive seven-tier planning panels, responsive tier navigation, adviser cards, community video sections, PDF viewers, and a shared footer banner for consistent updates across pages.",
+            "backend": "WordPress with Elementor Pro forms and dashboard submission records, WP Mail SMTP configured for SMTP2GO email delivery, and deployment on Cloudways. The BIS client portal is embedded from its external host, while appointment booking links connect visitors to advisers on Calendly.",
+            "database": "WordPress database storing page content, Elementor layouts and reusable templates, media references, and captured form submissions. Client portal records remain within the external BIS platform rather than a custom local portal database.",
+            "detailsList": [
+                "Multi-page WordPress rebuild covering company information, Personal and Business planning, adviser profiles, community support, client services, consultation enquiries, and legal content.",
+                "Interactive seven-tier Personal and Business planning sections with tier selectors, previous/next controls, and mobile-centred navigation.",
+                "Responsive planning panels with contextual information, financial warnings, and links to Family and Corporate Advisory Brief PDFs.",
+                "BIS client portal embedded on the Client Services page through an externally hosted iframe.",
+                "Calendly booking links for individual advisers alongside a dedicated contact and meeting page.",
+                "Enquiry forms with required Privacy Notice consent and submission records available in the WordPress dashboard.",
+                "Authenticated form notification delivery through WP Mail SMTP and SMTP2GO, routed to the client's sales mailbox.",
+                "Client-provided legal documents integrated into the site, with mobile PDF display fixes and existing QR-linked legal URLs preserved.",
+                "Community support cards with embedded videos, partner links, and navigation from homepage cards to the relevant community sections.",
+                "Reusable footer banner and consistent card alignment, headshot cropping, typography, and spacing across desktop, tablet, and mobile.",
+                "Cloudways hosting migration with coordinated DNS changes, SSL setup, and follow-up checks on links and form delivery."
+            ]
+        }
+    },
+    {
+        "id": "proj_18",
+        "image": "/images/projects/proj_18.webp",
+        "title": "Dockbridge Logistics — Truck Dispatch Website Redesign & Lead Generation",
+        "category": "wordpress",
+        "tags": [
+            "WordPress",
+            "Elementor",
+            "Logistics Website",
+            "Lead Generation",
+            "Dispatch Enquiry Forms",
+            "Pricing Tables",
+            "SMS Opt-in",
+            "Responsive Design"
+        ],
+        "desc": "A WordPress website redesign for a US truck dispatch company, bringing equipment-specific services, percentage-based pricing, driver testimonials, and carrier enquiry forms into a clear customer journey, with optional SMS consent and dedicated privacy and terms pages.",
+        "demoUrl": "https://dockbridgelogistics.com/",
+        "gitUrl": "",
+        "problem": "The client needed to modernise an existing logistics website using an approved reference and mockup while clearly presenting the company's dispatch services, equipment coverage, pricing, and contact options. Prospective carriers needed a straightforward way to explore the services and submit an enquiry, supported by company information and client-supplied driver feedback. A later requirement added website changes for the client's SMS registration process: phone-collecting forms needed a separate, optional SMS opt-in choice, and the privacy and terms pages needed matching messaging disclosures and visible links.",
+        "solution": "Redesigned the site in WordPress with Elementor, following the client's approved mockup, typography, imagery, and requested background colours. Organised the content across the homepage, Dispatch, Prices, About, equipment service sections, Contact Us, Privacy Policy, and Terms & Conditions. Added equipment-specific service descriptions, percentage-based dispatch pricing, driver testimonials, FAQs, and enquiry calls to action throughout the site. Built a dedicated contact form collecting names, email, operating status, mobile number, and a message. Updated the website-side SMS consent flow with a separate opt-in checkbox and links to the privacy and terms pages, alongside the personal-data consent field. Expanded the policy content to explain information collection, usage, SMS data sharing restrictions, message frequency, potential charges, and STOP/HELP instructions, following the client's supplied checklist and feedback.",
+        "result": "Delivered a branded dispatch services website that gives owner-operators and small fleets clear routes from service and pricing information to a carrier enquiry. The site brings company content, equipment coverage, testimonials, and contact details into a consistent WordPress presentation, with dedicated legal pages and SMS consent information supporting the client's messaging registration requirements.",
+        "archDetails": {
+            "frontend": "Elementor page layouts with branded hero sections, equipment service cards, dispatch pricing tables, testimonial and FAQ sections, enquiry calls to action, and contact forms arranged for desktop, tablet, and mobile viewing.",
+            "backend": "WordPress content management for service, pricing, company, and legal pages, with enquiry forms collecting contact and carrier details for the dispatch team. The contact flow includes a separate SMS consent choice and links to the corresponding policy pages.",
+            "database": "WordPress database managing page content, Elementor layout settings, reusable sections, and media references. Website forms collect the contact and carrier information needed for enquiry follow-up.",
+            "detailsList": [
+                "WordPress redesign based on the client's approved reference and mockup, including requested brand colours, typography, and imagery.",
+                "Structured Dispatch, Prices, About, equipment service, and Contact Us content with prominent carrier enquiry calls to action.",
+                "Equipment-specific dispatch service descriptions and percentage-based pricing tables for comparing service options.",
+                "Client-supplied driver testimonials and FAQ sections supporting the service presentation.",
+                "Contact form collecting names, email, operating status, mobile number, and an enquiry message.",
+                "Separate SMS opt-in and personal-data consent controls, with links to the Privacy Policy and Terms & Conditions.",
+                "Privacy content covering information collection, usage, and restrictions on sharing SMS consent and mobile numbers for marketing.",
+                "SMS terms covering communication purposes, message frequency, possible charges, opt-in, STOP opt-out, and HELP instructions.",
+                "Visible legal links and business contact details in the site navigation and footer.",
+                "Responsive layouts for dispatch information, equipment cards, pricing, and enquiry forms across device sizes."
             ]
         }
     }

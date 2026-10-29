@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import ProjectsClient from "@/components/ProjectsClient";
 import JsonLd from "@/components/JsonLd";
 import { pageGraph } from "@/lib/siteConfig";
-import { fetchWordPressCategories, fetchWordPressProjects } from "@/lib/wordpress";
+import { getProjectCategories, getProjects } from "@/lib/projects";
 
 const title = "Projects — Arfan Ahmed, Full Stack Web Developer";
 const description =
@@ -41,11 +41,9 @@ const graph = pageGraph({
   ],
 });
 
-export default async function ProjectsPage() {
-  const [categories, projects] = await Promise.all([
-    fetchWordPressCategories(),
-    fetchWordPressProjects(),
-  ]);
+export default function ProjectsPage() {
+  const categories = getProjectCategories();
+  const projects = getProjects();
 
   return (
     <>

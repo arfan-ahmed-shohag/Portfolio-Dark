@@ -1,70 +1,21 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import ProjectCard, { Project } from "@/components/ProjectCard";
 import { FolderGit2 } from "lucide-react";
-import {
-  CategoryOption,
-  fetchWordPressCategories,
-  fetchWordPressProjects,
-} from "@/lib/wordpress";
+import type { CategoryOption } from "@/lib/projects";
 
 interface ProjectsClientProps {
-  initialCategories?: CategoryOption[];
-  initialProjects?: Project[];
+  initialCategories: CategoryOption[];
+  initialProjects: Project[];
 }
 
-const DEFAULT_CATEGORIES: CategoryOption[] = [
-  { label: "All Projects", value: "all" },
-  { label: "Full-Stack", value: "fullstack" },
-  { label: "Frontend", value: "frontend" },
-  { label: "WordPress", value: "wordpress" },
-];
-
 export default function ProjectsClient({
-  initialCategories,
-  initialProjects,
+  initialCategories: categories,
+  initialProjects: projects,
 }: ProjectsClientProps) {
   const [filter, setFilter] = useState<string>("all");
-
-  const [categories, setCategories] = useState<CategoryOption[]>(
-    initialCategories && initialCategories.length > 0
-      ? initialCategories
-      : DEFAULT_CATEGORIES
-  );
-
-  const [projects, setProjects] = useState<Project[]>(
-    initialProjects || []
-  );
-
-  const [isLoading, setIsLoading] = useState<boolean>(!initialProjects || initialProjects.length === 0);
-
-  const loadData = async () => {
-    try {
-      const [fetchedCats, fetchedProjs] = await Promise.all([
-        fetchWordPressCategories(),
-        fetchWordPressProjects(),
-      ]);
-
-      if (fetchedCats && fetchedCats.length > 0) {
-        setCategories(fetchedCats);
-      }
-      if (fetchedProjs) {
-        setProjects(fetchedProjs);
-      }
-    } catch (err) {
-      console.error("Failed to load WordPress project data:", err);
-    } finally {
-      setIsLoading(false);
-    }
-  };
-
-  useEffect(() => {
-    if (!initialProjects || initialProjects.length === 0) {
-      loadData();
-    }
-  }, [initialProjects]);
 
   const handleFilterChange = (cat: string) => {
     setFilter(cat);
@@ -106,7 +57,7 @@ export default function ProjectsClient({
           Projects & Case Studies
         </h1>
         <p className="text-slate-300 font-sans text-sm sm:text-base max-w-xl leading-relaxed">
-          Explore client builds and production full-stack systems fetched dynamically from WordPress REST API. Filter by category to inspect architecture breakdowns and live demos.
+          Explore client builds and production full-stack systems. Filter by category to inspect architecture breakdowns and live demos.
         </p>
       </motion.section>
 
@@ -132,51 +83,35 @@ export default function ProjectsClient({
         ))}
       </motion.section>
 
-      {/* Projects Grid or Loading Skeleton */}
-      {isLoading ? (
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {[1, 2, 3].map((n) => (
-            <div
-              key={n}
-              className="bg-[#1e293b] border border-slate-800 rounded-2xl overflow-hidden p-5 space-y-4 animate-pulse"
-            >
-              <div className="w-full aspect-video bg-slate-800 rounded-xl" />
-              <div className="h-4 bg-slate-800 rounded w-1/3" />
-              <div className="h-6 bg-slate-800 rounded w-3/4" />
-              <div className="h-12 bg-slate-800 rounded w-full" />
-            </div>
-          ))}
-        </div>
-      ) : (
-        <motion.section
-          initial={{ opacity: 0, y: 15 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.4 }}
+      {/* Projects Grid */}
+      <motion.section
+        initial={{ opacity: 0, y: 15 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.4 }}
+      >
+        <motion.div
+          layout
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
         >
-          <motion.div
-            layout
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
-          >
-            <AnimatePresence mode="popLayout">
-              {filteredProjects.map((project) => (
-                <motion.div
-                  key={project.id}
-                  layout
-                  initial={{ opacity: 0, scale: 0.95 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  exit={{ opacity: 0, scale: 0.95 }}
-                  transition={{ duration: 0.25 }}
-                >
-                  <ProjectCard project={project} />
-                </motion.div>
-              ))}
-            </AnimatePresence>
-          </motion.div>
-        </motion.section>
-      )}
+          <AnimatePresence mode="popLayout">
+            {filteredProjects.map((project) => (
+              <motion.div
+                key={project.id}
+                layout
+                initial={{ opacity: 0, scale: 0.95 }}
+                animate={{ opacity: 1, scale: 1 }}
+                exit={{ opacity: 0, scale: 0.95 }}
+                transition={{ duration: 0.25 }}
+              >
+                <ProjectCard project={project} />
+              </motion.div>
+            ))}
+          </AnimatePresence>
+        </motion.div>
+      </motion.section>
 
       {/* Empty State */}
-      {!isLoading && filteredProjects.length === 0 && (
+      {filteredProjects.length === 0 && (
         <section className="text-center py-20 border border-dashed border-slate-800 rounded-2xl">
           <FolderGit2 className="w-12 h-12 text-slate-600 mx-auto mb-3" />
           <p className="text-sm font-semibold text-slate-400">

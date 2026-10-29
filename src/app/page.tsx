@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import HomeClient from "@/components/HomeClient";
 import JsonLd from "@/components/JsonLd";
 import { pageGraph } from "@/lib/siteConfig";
-import { fetchWordPressProjects } from "@/lib/wordpress";
+import { getProjects } from "@/lib/projects";
 
 const title = "Arfan Ahmed | Full Stack Web Developer";
 const description =
@@ -38,8 +38,8 @@ const graph = pageGraph({
   crumbs: [{ name: "Home", path: "/" }],
 });
 
-export default async function Home() {
-  const projects = await fetchWordPressProjects();
+export default function Home() {
+  const projects = getProjects();
 
   return (
     <>
